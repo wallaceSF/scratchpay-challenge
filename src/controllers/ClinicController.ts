@@ -13,7 +13,7 @@ export class ClinicController {
 
     public find(request: Request, response: Response) {
         
-        let clinicRequest = request.query as ClinicRequest;
+        let clinicRequest = <ClinicRequest> <unknown>request.query;
         let promise = this._clinicService.findClinicByFilter(clinicRequest);
         
         if(promise === null){
