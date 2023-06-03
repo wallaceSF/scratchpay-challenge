@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --parallel -r ts-node/register ./src/tests/*.spec.ts",
-    "start": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts"
+    "start": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts",
+    "build": "tsc -p ."
   },
   "keywords": [],
   "author": "",
