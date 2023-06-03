@@ -15,5 +15,15 @@ steps:
   displayName: 'npm install'
 
 - script: |
+    npm test
+  displayName: 'unit test with report' 
+
+- script: |
     npm run build
   displayName: 'npm build'
+  
+- task: PublishTestResults@2
+  condition: succeededOrFailed()
+  inputs:
+    testRunner: JUnit
+    testResultsFiles: '**/test-results.xml'
