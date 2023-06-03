@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --parallel -r ts-node/register ./src/tests/*.spec.ts",
+    "test": "mocha --reporter mocha-junit-reporter -r ts-node/register ./src/tests/*.spec.ts",
     "start": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts",
     "build": "tsc -p ."
   },
@@ -17,6 +17,7 @@
     "@types/mongoose": "^5.3.27",
     "chai": "^4.3.7",
     "mocha": "^10.2.0",
+    "mocha-junit-reporter": "^2.2.0",
     "nodemon": "^1.18.11",
     "ts-node": "^6.2.0"
   },
