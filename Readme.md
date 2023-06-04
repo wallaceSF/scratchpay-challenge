@@ -1,4 +1,4 @@
-[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=wallaceSF_scratchpay-challenge)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=wallaceSF_scratchpay-challenge&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=wallaceSF_scratchpay-challenge)
 [![Build Status](https://dev.azure.com/wallacesf0597/Control-media/_apis/build/status%2FScratchpay%20Challenge?branchName=refs%2Fpull%2F3%2Fmerge)](https://dev.azure.com/wallacesf0597/Control-media/_build/latest?definitionId=2&branchName=refs%2Fpull%2F3%2Fmerge)
 
 # ScrayPay Challenge
