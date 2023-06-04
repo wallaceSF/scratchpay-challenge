@@ -7,7 +7,6 @@ import * as createError from 'http-errors';
 import {RouteClinic} from "./routes/RouteClinic";
 
 debug('ts-express:server');
-
 function onError(error: NodeJS.ErrnoException): void {
     console.log('onError');
     if (error.syscall !== 'listen') throw error;
