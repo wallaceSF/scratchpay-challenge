@@ -1,0 +1,16 @@
+version: "3.5"
+
+services:
+  node:
+    build: "./"   
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./:/usr/src/app 
+    command: bash -c "npm install && npm start"
+    networks:
+      - dev 
+networks:
+  dev:
+    name: dev
+    driver: bridge
