@@ -4,9 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter mocha-junit-reporter -r ts-node/register ./src/tests/*.spec.ts",
+    "test-ci": "nyc -a --reporter=clover mocha --recursive --reporter mocha-bamboo-reporter -r ts-node/register ./src/tests/*.spec.ts",
+    "test": "mocha -r ts-node/register ./src/tests/*.spec.ts",
+    "test:coverage": "npm run cover:unit && npm run cover:report",
+    "test:coveragehtml": "npm run cover:unit && npm run cover:reporthtml",
+    "cover:unit": "nyc --silent npm run test",
+    "cover:report": "nyc report --reporter=lcov --reporter=text --report-dir='./jscoverage'",
+    "cover:reporthtml": "nyc report --reporter=html --report-dir='./jscoverage'",
     "start": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts",
     "build": "tsc -p ."
+  },
+  "nyc": {
+    "exclude": ["./src/tests/*.spec.ts"]
   },
   "keywords": [],
   "author": "",
