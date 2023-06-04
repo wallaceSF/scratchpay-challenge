@@ -14,7 +14,7 @@ To access, enter the address bar with this url: `http://localhost:4000`, however
 ## Api's públicas
 | EndPoints     | Tipo     | Descrição                              |
 |---------------|----------|----------------------------------------| 
-| `/heathcheck` | `get`    | heathcheck route                       |
+| `/`           | `get`    | heathcheck route                       |
 | `/clinic`     | `get`    | returns a clinic based on the parameters |
 
 ## Examples - Curl
