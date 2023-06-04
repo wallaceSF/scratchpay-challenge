@@ -15,7 +15,7 @@ steps:
     displayName: 'npm install'
 
   - script: |
-      npm test
+      npm run test-ci
     displayName: 'unit test with report'
 
   - script: |

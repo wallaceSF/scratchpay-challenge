@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-ci": "nyc -a --reporter=clover mocha --recursive --reporter mocha-bamboo-reporter -r ts-node/register ./src/tests/*.spec.ts",
+    "test-ci": "mocha --reporter mocha-junit-reporter -r ts-node/register ./src/tests/*.spec.ts",
     "test": "mocha -r ts-node/register ./src/tests/*.spec.ts",
     "test:coverage": "npm run cover:unit && npm run cover:report",
     "test:coveragehtml": "npm run cover:unit && npm run cover:reporthtml",
